@@ -7,15 +7,26 @@
 
 using namespace std;
 
-TEST( CodesBay1, Subtest1) {
-	ASSERT_EQ(1, 2);
-	cout << "After assertion 1" << endl;
+class MyClass {
+	string id;
+public:
+	MyClass(string _id) : id(_id) {} 
+	string GetId() { return id; }
+};
+
+TEST(CodesBayClasses, increment_by_5) {
+	// Arrange
+	MyClass mc("root");
+
+	// Act
+	string value = mc.GetId();
+
+	// Assert
+	//ASSERT_STREQ(value.c_str(), "root");
+	EXPECT_STREQ(value.c_str(), "root");
 }
 
-TEST(CodesBay2, Subtest2) {
-	EXPECT_EQ(1, 2);
-	cout << "After assertion 2" << endl;
-}
+
 
 int main(int argc, char* argv[])
 {
