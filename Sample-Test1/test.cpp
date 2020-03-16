@@ -17,11 +17,11 @@ TEST_F(BankAccountTest, BankAccountStartsEmpty) {
 }
 
 TEST(CodesBay1, Subtest1) {
-    ASSERT_EQ(1, 2);
+    ASSERT_EQ(1, 1);
     cout << "After assertion 1" << endl;
 }
 
 TEST(CodesBay2, Subtest2) {
-    EXPECT_EQ(1, 2);
+    EXPECT_EQ(1, 1);
     cout << "After assertion 2" << endl;
 }
