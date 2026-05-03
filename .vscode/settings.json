@@ -1,0 +1,9 @@
+{
+    "editor.fontFamily": "'Terminus \\(TTF\\)'",
+    "editor.fontLigatures": null,
+    "font-switcher.enableLivePreview": true,
+    "font-switcher.fontFamily": "'Terminus (TTF) Bold'",
+    "editor.fontSize": 22,
+    "editor.tabSize": 4,
+    "terminal.integrated.fontSize": 18
+}
