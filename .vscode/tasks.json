@@ -45,6 +45,7 @@
             "args": [
                 "-std=c++20",
                 "-fdiagnostics-color=always",
+                "-I/opt/homebrew/opt/boost/include",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
