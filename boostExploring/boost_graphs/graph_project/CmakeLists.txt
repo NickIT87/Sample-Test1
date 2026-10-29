@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.18)
+
+project(graph_project LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# Находим Python из активного виртуального окружения.
+find_package(Python3 REQUIRED
+    COMPONENTS Interpreter Development.Module
+)
+
+# Находим Boost.
+find_package(Boost REQUIRED)
+
+# Находим pybind11, установленный через pip.
+find_package(pybind11 CONFIG REQUIRED)
+
+# Создаём расширение, которое Python сможет импортировать.
+pybind11_add_module(graph_module graph_module.cpp)
+
+target_include_directories(graph_module PRIVATE
+    ${Boost_INCLUDE_DIRS}
+)
+
+target_compile_features(graph_module PRIVATE cxx_std_17)
